@@ -47,6 +47,31 @@ def get_entities_set(domain='gaming'):
     return return_entities
 
 
+def get_entities_dict(domain='gaming'):
+    """[summary]
+
+    Keyword Arguments:
+        domain {str} -- [description] (default: {'gaming'})
+    """
+
+    entities = [
+        'Badges', 'Comments', 'PostHistory', 'PostLinks', 'Posts',
+        'Tags', 'Users', 'Votes']
+
+    meta_path_template = 'raw\\{0}\\meta\\{1}.xml'
+    path_template = 'raw\\{0}\\{1}.xml'
+    csv_path_template = 'data\\{0}\\{1}.csv'
+
+    return_entities = {entity: {
+        'entity_name': entity,
+        'entity_path': path_template.format(domain, entity),
+        'entity_meta_path': meta_path_template.format(domain, entity),
+        'entity_csv_path': csv_path_template.format(domain, entity),
+        'entity_keys': get_entity_keys(domain, entity)} for entity in entities
+    }
+    return return_entities
+
+
 def parse_one_node(node, attrib_keys):
     """[summary]
 
