@@ -3,7 +3,7 @@
 # import json
 
 
-def get_entity_keys(domain='gaming', entity='Badges'):
+def get_entity_keys(domain='gaming', entity='Badges', selected=True):
     """[summary]
 
     Keyword Arguments:
@@ -15,14 +15,16 @@ def get_entity_keys(domain='gaming', entity='Badges'):
     """
 
     import pandas as pd
-    entity_keys_csv_file = 'data\\{0}\\keys\\{1}.csv'
+
+    entity_keys_csv_file = 'data\\{0}\\selected_keys\\{1}.csv' \
+        if (selected is True) else 'data\\{0}\\keys\\{1}.csv'
 
     return list(pd.read_csv(
         entity_keys_csv_file.format(domain, entity),
         header=None, index_col=None)[0])
 
 
-def get_entities_set(domain='gaming'):
+def get_entities_set(domain='gaming', selected=True):
     """[summary]
 
     Keyword Arguments:
@@ -35,14 +37,15 @@ def get_entities_set(domain='gaming'):
 
     meta_path_template = 'raw\\{0}\\meta\\{1}.xml'
     path_template = 'raw\\{0}\\{1}.xml'
-    csv_path_template = 'data\\{0}\\{1}.csv'
+    csv_path_template = 'data\\{0}\\csv\\{1}.csv'
 
     return_entities = [{
         'entity_name': entity,
         'entity_path': path_template.format(domain, entity),
         'entity_meta_path': meta_path_template.format(domain, entity),
         'entity_csv_path': csv_path_template.format(domain, entity),
-        'entity_keys': get_entity_keys(domain, entity)} for entity in entities
+        'entity_keys': get_entity_keys(domain, entity, selected)}
+            for entity in entities
     ]
     return return_entities
 
@@ -60,10 +63,11 @@ def get_entities_dict(domain='gaming'):
 
     meta_path_template = 'raw\\{0}\\meta\\{1}.xml'
     path_template = 'raw\\{0}\\{1}.xml'
-    csv_path_template = 'data\\{0}\\{1}.csv'
+    csv_path_template = 'data\\{0}\\csv\\{1}.csv'
 
     return_entities = {entity: {
         'entity_name': entity,
+        'entity_domain': domain,
         'entity_path': path_template.format(domain, entity),
         'entity_meta_path': meta_path_template.format(domain, entity),
         'entity_csv_path': csv_path_template.format(domain, entity),
@@ -106,6 +110,26 @@ def parse_root(root, attribs):
     print(f'process {i} items')
     print(len(rows))
     return rows
+
+
+def convert_xml_to_csv(entity_dict):
+    # {'entity_name': 'Posts',
+    # 'entity_domain': 'gaming',
+    # 'entity_path': 'raw\\gaming\\Posts.xml',
+    # 'entity_meta_path': 'raw\\gaming\\meta\\Posts.xml',
+    # 'entity_csv_path': 'data\\gaming\\Posts.csv',
+    # 'entity_keys': ['Score',...]}
+
+    import xml.etree.ElementTree as ET
+    tree = ET.parse(entity_dict['entity_path'])
+    root = tree.getroot()
+    nodes_list = parse_root(root, entity_dict['entity_keys'])
+
+    import pandas as pd
+    df = pd.DataFrame(nodes_list)
+    df.to_csv(entity_dict['entity_csv_path'], index=False)
+
+    return df.count()
 
 
 if __name__ == '__main__':
