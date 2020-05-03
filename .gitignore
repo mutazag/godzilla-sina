@@ -134,3 +134,4 @@ raw/
 
 # data csv folder 
 data/*/csv
+data/*/tsv
