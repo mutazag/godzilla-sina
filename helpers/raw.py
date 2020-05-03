@@ -97,13 +97,15 @@ def parse_one_node(node, attrib_keys):
     Returns:
         [type] -- [description]
     """
+    import urllib
+    rich_text_fields = {'Body', 'Title', 'AboutMe', 'Text', 'Comment'}
     node_attribs_dict = {}
     for k, key in enumerate(attrib_keys):
         # node_attribs_dict[key] = node.attrib[key]
         value = node.get(key)
-        if type(value) is str:
-            value = value.replace('\r\n', ' ')
-            value = value.replace('\n', ' ')
+        if (key in rich_text_fields) and (value is not None):
+            value = urllib.parse.quote(value)
+
         node_attribs_dict[key] = value
     return node_attribs_dict
 

@@ -17,7 +17,10 @@
 | Users | [download](https://godzillasinastorage.blob.core.windows.net/data/gaming/tsv/Users_text.tsv) |
 | Votes | [download](https://godzillasinastorage.blob.core.windows.net/data/gaming/tsv/Votes_text.tsv) |    
 
+use URL decode functions for the any of the following columns `{'Body', 'Title', 'AboutMe', 'Text', 'Comment'}`
 
+[URLEncode/URLDecode in R](https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/URLencode)
+`urllib.parse.unquote(value)` [in python]({'Body', 'Title', 'AboutMe', 'Text', 'Comment'})
 
 # gaming csvs: without long text fields
 
