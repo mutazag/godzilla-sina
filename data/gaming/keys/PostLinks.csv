@@ -1,5 +1,5 @@
-LinkTypeId
-RelatedPostId
 Id
-PostId
 CreationDate
+PostId
+RelatedPostId
+LinkTypeId

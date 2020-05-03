@@ -1,9 +1,9 @@
-UserDisplayName
-UserId
-Text
-PostHistoryTypeId
 Id
-Comment
-RevisionGUID
+PostHistoryTypeId
 PostId
+RevisionGUID
 CreationDate
+UserId
+UserDisplayName
+Text
+Comment

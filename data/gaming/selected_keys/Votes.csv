@@ -1,5 +1,5 @@
-UserId
-VoteTypeId
 Id
 PostId
+VoteTypeId
+UserId
 CreationDate
