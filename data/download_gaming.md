@@ -19,8 +19,9 @@
 
 use URL decode functions for the any of the following columns `{'Body', 'Title', 'AboutMe', 'Text', 'Comment'}`
 
-[URLEncode/URLDecode in R](https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/URLencode)
-`urllib.parse.unquote(value)` [in python]({'Body', 'Title', 'AboutMe', 'Text', 'Comment'})
+- [URLEncode/URLDecode in R](https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/URLencode)
+
+- `urllib.parse.unquote(value)` [in python](https://docs.python.org/3/library/urllib.parse.html#module-urllib.parse)
 
 # gaming csvs: without long text fields
 
