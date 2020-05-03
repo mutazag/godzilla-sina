@@ -38,12 +38,14 @@ def get_entities_set(domain='gaming', selected=True):
     meta_path_template = 'raw\\{0}\\meta\\{1}.xml'
     path_template = 'raw\\{0}\\{1}.xml'
     csv_path_template = 'data\\{0}\\csv\\{1}.csv'
+    tsv_path_template = 'data\\{0}\\tsv\\{1}.tsv'
 
     return_entities = [{
         'entity_name': entity,
         'entity_path': path_template.format(domain, entity),
         'entity_meta_path': meta_path_template.format(domain, entity),
         'entity_csv_path': csv_path_template.format(domain, entity),
+        'entity_tsv_path': tsv_path_template.format(domain, entity),
         'entity_keys': get_entity_keys(domain, entity, selected)}
             for entity in entities
     ]
@@ -64,13 +66,22 @@ def get_entities_dict(domain='gaming'):
     meta_path_template = 'raw\\{0}\\meta\\{1}.xml'
     path_template = 'raw\\{0}\\{1}.xml'
     csv_path_template = 'data\\{0}\\csv\\{1}.csv'
+    tsv_path_template = 'data\\{0}\\tsv\\{1}.tsv'
+    tsv_with_text_path_template = 'data\\{0}\\tsv\\{1}_text.tsv'
 
     return_entities = {entity: {
         'entity_name': entity,
         'entity_domain': domain,
         'entity_path': path_template.format(domain, entity),
         'entity_meta_path': meta_path_template.format(domain, entity),
-        'entity_csv_path': csv_path_template.format(domain, entity),
+        'entity_csv_path':
+            csv_path_template.format(domain, entity),
+        'entity_tsv_path':
+            tsv_path_template.format(domain, entity),
+        'entity_tsv_with_text_path':
+            tsv_with_text_path_template.format(domain, entity),
+        'entity_keys_with_text':
+            get_entity_keys(domain, entity, selected=False),
         'entity_keys': get_entity_keys(domain, entity)} for entity in entities
     }
     return return_entities
@@ -89,7 +100,11 @@ def parse_one_node(node, attrib_keys):
     node_attribs_dict = {}
     for k, key in enumerate(attrib_keys):
         # node_attribs_dict[key] = node.attrib[key]
-        node_attribs_dict[key] = node.get(key)
+        value = node.get(key)
+        if type(value) is str:
+            value = value.replace('\r\n', ' ')
+            value = value.replace('\n', ' ')
+        node_attribs_dict[key] = value
     return node_attribs_dict
 
 
@@ -112,7 +127,8 @@ def parse_root(root, attribs):
     return rows
 
 
-def convert_xml_to_csv(entity_dict):
+def convert_xml_to_csv(entity_dict, keeptext=False):
+    import csv
     # {'entity_name': 'Posts',
     # 'entity_domain': 'gaming',
     # 'entity_path': 'raw\\gaming\\Posts.xml',
@@ -123,12 +139,26 @@ def convert_xml_to_csv(entity_dict):
     import xml.etree.ElementTree as ET
     tree = ET.parse(entity_dict['entity_path'])
     root = tree.getroot()
-    nodes_list = parse_root(root, entity_dict['entity_keys'])
+    nodes_list = parse_root(
+        root,
+        entity_dict['entity_keys_with_text']
+        if keeptext is True else
+        entity_dict['entity_keys'])
 
     import pandas as pd
     df = pd.DataFrame(nodes_list)
-    df.to_csv(entity_dict['entity_csv_path'], index=False)
-
+    if keeptext is True:
+        df.to_csv(
+            entity_dict['entity_tsv_with_text_path'],
+            index=False,
+            quoting=csv.QUOTE_NONE,
+            quotechar="",
+            escapechar="\\",
+            sep='\t')
+    else:
+        df.to_csv(
+            entity_dict['entity_csv_path'],
+            index=False)
     return df.count()
 
 
