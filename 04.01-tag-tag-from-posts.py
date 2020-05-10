@@ -21,7 +21,7 @@ print(dfQuestions.head())
 
 # %%
 print('counts:\n', dfQuestions.count(), '\n')
-print('missing values %:\n', dfQuestions.isna().sum()/(len(dfQuestions))*100)
+print('missing values %:\n', dfQuestions.isna().sum() / (len(dfQuestions)) * 100)
 
 # %% [markdown]
 # # split the tags and start creating tag tag data set
@@ -48,7 +48,7 @@ dfQuestions.TagsList = dfQuestions['TagsList'].apply(lambda l: sorted(l))
 
 dfQuestions['TagsCount'] = dfQuestions.TagsList.apply(len)
 dfQuestions['EdgesCount'] = \
-    (dfQuestions['TagsCount'] * (dfQuestions['TagsCount']-1)/2).astype(int)
+    (dfQuestions['TagsCount'] * (dfQuestions['TagsCount'] - 1) / 2).astype(int)
 
 print(dfQuestions.TagsCount.value_counts())
 
@@ -88,4 +88,4 @@ print(edges_grouped.head())
 # %%
 filename = 'data/outputs/tags-tags.csv'
 print(f'write tag-tag csv to file: {filename}')
-edges_grouped[['v1','v2','weight']].to_csv(filename, index=False)
+edges_grouped[['v1', 'v2', 'weight']].to_csv(filename, index=False)
