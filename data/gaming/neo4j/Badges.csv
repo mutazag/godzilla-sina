@@ -1,0 +1,179 @@
+:ID,:LABEL,Name,tagbased:boolean,BadgeClass
+Altruist,Badge,Altruist,false,bronze
+Analytical,Badge,Analytical,false,bronze
+Announcer,Badge,Announcer,false,bronze
+Archaeologist,Badge,Archaeologist,false,silver
+Autobiographer,Badge,Autobiographer,false,bronze
+Benefactor,Badge,Benefactor,false,bronze
+Beta,Badge,Beta,false,silver
+Booster,Badge,Booster,false,silver
+Caucus,Badge,Caucus,false,bronze
+Census,Badge,Census,false,silver
+Citizen Patrol,Badge,Citizen Patrol,false,bronze
+Civic Duty,Badge,Civic Duty,false,silver
+Cleanup,Badge,Cleanup,false,bronze
+Commentator,Badge,Commentator,false,bronze
+Constable,Badge,Constable,false,gold
+Constituent,Badge,Constituent,false,silver
+Convention,Badge,Convention,false,silver
+Copy Editor,Badge,Copy Editor,false,gold
+Critic,Badge,Critic,false,bronze
+Curious,Badge,Curious,false,bronze
+Custodian,Badge,Custodian,false,bronze
+Deputy,Badge,Deputy,false,silver
+Disciplined,Badge,Disciplined,false,bronze
+Editor,Badge,Editor,false,bronze
+Electorate,Badge,Electorate,false,gold
+Enlightened,Badge,Enlightened,false,silver
+Enthusiast,Badge,Enthusiast,false,silver
+Epic,Badge,Epic,false,silver
+Excavator,Badge,Excavator,false,bronze
+Explainer,Badge,Explainer,false,bronze
+Famous Question,Badge,Famous Question,false,gold
+Fanatic,Badge,Fanatic,false,gold
+Favorite Question,Badge,Favorite Question,false,silver
+Generalist,Badge,Generalist,false,silver
+Good Answer,Badge,Good Answer,false,silver
+Good Question,Badge,Good Question,false,silver
+Great Answer,Badge,Great Answer,false,gold
+Great Question,Badge,Great Question,false,gold
+Guru,Badge,Guru,false,silver
+Informed,Badge,Informed,false,bronze
+Inquisitive,Badge,Inquisitive,false,silver
+Investor,Badge,Investor,false,bronze
+Legendary,Badge,Legendary,false,gold
+Lifeboat,Badge,Lifeboat,false,gold
+Lifejacket,Badge,Lifejacket,false,silver
+Marshal,Badge,Marshal,false,gold
+Mortarboard,Badge,Mortarboard,false,bronze
+Necromancer,Badge,Necromancer,false,silver
+Nice Answer,Badge,Nice Answer,false,bronze
+Nice Question,Badge,Nice Question,false,bronze
+Notable Question,Badge,Notable Question,false,silver
+Organizer,Badge,Organizer,false,bronze
+Outspoken,Badge,Outspoken,false,silver
+Peer Pressure,Badge,Peer Pressure,false,bronze
+Popular Question,Badge,Popular Question,false,bronze
+Populist,Badge,Populist,false,gold
+Precognitive,Badge,Precognitive,false,bronze
+Promoter,Badge,Promoter,false,bronze
+Proofreader,Badge,Proofreader,false,bronze
+Publicist,Badge,Publicist,false,gold
+Pundit,Badge,Pundit,false,silver
+Quorum,Badge,Quorum,false,bronze
+Refiner,Badge,Refiner,false,silver
+Research Assistant,Badge,Research Assistant,false,silver
+Reversal,Badge,Reversal,false,gold
+Reviewer,Badge,Reviewer,false,silver
+Revival,Badge,Revival,false,bronze
+Scholar,Badge,Scholar,false,bronze
+Self-Learner,Badge,Self-Learner,false,bronze
+Sheriff,Badge,Sheriff,false,gold
+Socratic,Badge,Socratic,false,gold
+Sportsmanship,Badge,Sportsmanship,false,silver
+Steward,Badge,Steward,false,gold
+Strunk & White,Badge,Strunk & White,false,silver
+Student,Badge,Student,false,bronze
+Suffrage,Badge,Suffrage,false,bronze
+Supporter,Badge,Supporter,false,bronze
+Synonymizer,Badge,Synonymizer,false,bronze
+Tag Editor,Badge,Tag Editor,false,bronze
+Talkative,Badge,Talkative,false,bronze
+Taxonomist,Badge,Taxonomist,false,silver
+Teacher,Badge,Teacher,false,bronze
+Tenacious,Badge,Tenacious,false,silver
+Tumbleweed,Badge,Tumbleweed,false,bronze
+Unsung Hero,Badge,Unsung Hero,false,gold
+Vox Populi,Badge,Vox Populi,false,bronze
+Yearling,Badge,Yearling,false,silver
+achievements,Badge,achievements,true,bronze
+animal-crossing-new-leaf,Badge,animal-crossing-new-leaf,true,bronze
+assassins-creed-revelations,Badge,assassins-creed-revelations,true,bronze
+battlefield-3,Badge,battlefield-3,true,bronze
+bioshock-infinite,Badge,bioshock-infinite,true,bronze
+borderlands-2,Badge,borderlands-2,true,bronze
+call-of-duty-modern-warfare-3,Badge,call-of-duty-modern-warfare-3,true,bronze
+civilization-5,Badge,civilization-5,true,bronze
+civilization-6,Badge,civilization-6,true,bronze
+clash-of-clans,Badge,clash-of-clans,true,bronze
+clash-royale,Badge,clash-royale,true,bronze
+counter-strike-global-offensive,Badge,counter-strike-global-offensive,true,bronze
+crusader-kings-2,Badge,crusader-kings-2,true,bronze
+dark-souls,Badge,dark-souls,true,bronze
+dark-souls-2,Badge,dark-souls-2,true,bronze
+dark-souls-3,Badge,dark-souls-3,true,bronze
+destiny,Badge,destiny,true,bronze
+deus-ex-human-revolution,Badge,deus-ex-human-revolution,true,bronze
+diablo-3,Badge,diablo-3,true,bronze
+dishonored,Badge,dishonored,true,bronze
+dota-2,Badge,dota-2,true,bronze
+dragonvale,Badge,dragonvale,true,bronze
+dungeon-defenders,Badge,dungeon-defenders,true,bronze
+dwarf-fortress,Badge,dwarf-fortress,true,bronze
+elite-dangerous,Badge,elite-dangerous,true,bronze
+europa-universalis-4,Badge,europa-universalis-4,true,bronze
+eve-online,Badge,eve-online,true,bronze
+fallout-4,Badge,fallout-4,true,bronze
+fallout-new-vegas,Badge,fallout-new-vegas,true,bronze
+fallout-shelter,Badge,fallout-shelter,true,bronze
+fez,Badge,fez,true,bronze
+final-fantasy-13-2,Badge,final-fantasy-13-2,true,bronze
+final-fantasy-15,Badge,final-fantasy-15,true,bronze
+ftl-faster-than-light,Badge,ftl-faster-than-light,true,bronze
+grand-theft-auto-5,Badge,grand-theft-auto-5,true,bronze
+guild-wars-2,Badge,guild-wars-2,true,bronze
+hearthstone,Badge,hearthstone,true,bronze
+heroes-of-the-storm,Badge,heroes-of-the-storm,true,bronze
+ingress,Badge,ingress,true,bronze
+kerbal-space-program,Badge,kerbal-space-program,true,bronze
+kingdoms-amalur-reckoning,Badge,kingdoms-amalur-reckoning,true,bronze
+kittens-game,Badge,kittens-game,true,bronze
+league-of-legends,Badge,league-of-legends,true,bronze
+mass-effect-2,Badge,mass-effect-2,true,bronze
+mass-effect-3,Badge,mass-effect-3,true,bronze
+mass-effect-3-multiplayer,Badge,mass-effect-3-multiplayer,true,bronze
+metal-gear-solid-5-the-phantom-pain,Badge,metal-gear-solid-5-the-phantom-pain,true,bronze
+minecraft-commands,Badge,minecraft-commands,true,bronze
+minecraft-feed-the-beast,Badge,minecraft-feed-the-beast,true,bronze
+minecraft-java-edition,Badge,minecraft-java-edition,true,gold
+minecraft-redstone,Badge,minecraft-redstone,true,bronze
+nethack,Badge,nethack,true,bronze
+nintendo-3ds-3dsxl-2ds,Badge,nintendo-3ds-3dsxl-2ds,true,bronze
+no-mans-sky,Badge,no-mans-sky,true,bronze
+overwatch,Badge,overwatch,true,bronze
+path-of-exile,Badge,path-of-exile,true,bronze
+payday-2,Badge,payday-2,true,bronze
+pc,Badge,pc,true,bronze
+pillars-of-eternity,Badge,pillars-of-eternity,true,bronze
+pokemon-go,Badge,pokemon-go,true,bronze
+pokemon-omega-ruby-alpha-sapphire,Badge,pokemon-omega-ruby-alpha-sapphire,true,bronze
+pokemon-series,Badge,pokemon-series,true,bronze
+pokemon-sixth-generation,Badge,pokemon-sixth-generation,true,bronze
+pokemon-sun-moon,Badge,pokemon-sun-moon,true,bronze
+pokemon-x-y,Badge,pokemon-x-y,true,bronze
+portal-2,Badge,portal-2,true,bronze
+ps3,Badge,ps3,true,bronze
+ps4,Badge,ps4,true,bronze
+saints-row-the-third,Badge,saints-row-the-third,true,bronze
+simcity-2013,Badge,simcity-2013,true,bronze
+star-wars-the-old-republic,Badge,star-wars-the-old-republic,true,bronze
+star-wars-tiny-death-star,Badge,star-wars-tiny-death-star,true,bronze
+starcraft-2,Badge,starcraft-2,true,bronze
+starcraft-zerg,Badge,starcraft-zerg,true,bronze
+stardew-valley,Badge,stardew-valley,true,bronze
+steam,Badge,steam,true,bronze
+stellaris,Badge,stellaris,true,bronze
+team-fortress-2,Badge,team-fortress-2,true,bronze
+terraria,Badge,terraria,true,bronze
+the-binding-of-isaac,Badge,the-binding-of-isaac,true,bronze
+the-binding-of-isaac-rebirth,Badge,the-binding-of-isaac-rebirth,true,bronze
+the-elder-scrolls-5-skyrim,Badge,the-elder-scrolls-5-skyrim,true,gold
+the-elder-scrolls-online,Badge,the-elder-scrolls-online,true,bronze
+the-witcher-2,Badge,the-witcher-2,true,bronze
+the-witcher-3,Badge,the-witcher-3,true,bronze
+world-of-warcraft,Badge,world-of-warcraft,true,bronze
+xbox-360,Badge,xbox-360,true,bronze
+xcom-2,Badge,xcom-2,true,bronze
+xcom-enemy-unknown,Badge,xcom-enemy-unknown,true,bronze
+zelda-breath-of-the-wild,Badge,zelda-breath-of-the-wild,true,bronze
+zelda-skyward-sword,Badge,zelda-skyward-sword,true,bronze
