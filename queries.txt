@@ -23,6 +23,10 @@ MATCH (u:User)
 where u.reputation > 1000
 with u order by u.reputation desc
 
+
+match (b:Badge {tagbased : true, BadgeClass :'gold'})<-[]-(u:User) return b, u
+
+
 bin\neo4j-admin.bat import --nodes:BBnode=BBnode.csv 
 return u limit 20;
 
@@ -38,5 +42,3 @@ bin\neo4j-admin.bat import --database importusers --ignore-empty-strings true  -
 
 bin\neo4j-admin.bat import --database importfiles --ignore-empty-strings true --nodes=User=import\Users.csv --nodes=Post=import\Posts.csv --nodes=Badge=import\Badges.csv --nodes=Answer=import\PostsAnswers.csv --relationships=HAS_BADGE=import/rel_user_badge.csv
 
-
-bin\neo4j-admin.bat import --database importfiles1 --ignore-empty-strings true --nodes=User=import\Users.csv --nodes=Post=import\Posts.csv 
