@@ -40,5 +40,5 @@ bin\neo4j-admin.bat import --database importanswers --ignore-empty-strings true 
 bin\neo4j-admin.bat import --database importusers --ignore-empty-strings true  --nodes=User=import\Users.csv
 
 
-bin\neo4j-admin.bat import --database importfiles --ignore-empty-strings true --nodes=User=import\Users.csv --nodes=Post=import\Posts.csv --nodes=Badge=import\Badges.csv --nodes=Answer=import\PostsAnswers.csv --relationships=HAS_BADGE=import/rel_user_badge.csv
+bin\neo4j-admin.bat import --database importfiles --ignore-empty-strings true --nodes=User=import\Users.csv --nodes=Post=import\Posts.csv --nodes=Badge=import\Badges.csv --nodes=Tag=import\Tags.csv --nodes=Answer=import\PostsAnswers.csv --relationships=HAS_BADGE=import/rel_user_badge.csv --relationships=TAGGED_WITH=import/rel_posts_tags.csv
 
