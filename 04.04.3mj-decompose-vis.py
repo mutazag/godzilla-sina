@@ -30,22 +30,26 @@ df_decompose = pd.read_csv('3mj/decomposed_3mj.csv')[['iteration', 'tag','filena
 # %%
 
 
-def plot_decompose(r): 
-    
+def plot_decompose(r):
+
     ego_node = df_decompose.query(f'iteration == {r.iteration+1}')['tag'].iloc[0]
     print(r.iteration, ego_node, sp[ego_node])
     g_node = gexf.read_gexf(r.filename)
     # sp1 = layout.kamada_kawai_layout(g_node)
     nx.draw(g_node, pos=sp, node_color='#0C84B6', node_size=5, with_labels=False )
-    # nx.draw_networkx_nodes(g_node, pos=sp, nodelist=[ego_node], node_size=10, node_color='#0E59A2')
     nx.draw_networkx_edges(g_node, pos=sp, alpha=0.04, edge_color='#D8E7F5')
 
+    plt.text(sp[ego_node][0], sp[ego_node][1], r.tag, fontsize=8, 
+        bbox={'facecolor': 'white', 'edgecolor': 'none', 'alpha': 0.5})
+    nx.draw_networkx_nodes(g_node, pos=sp, nodelist=[ego_node], node_size=10, node_color='r')
 
     plt.axis('off')
+    # plt.show()
     plt.savefig('images/'+r.filename.replace('.gexf','.png'), dpi=500)
+    plt.show()
 
-
-df_decompose.iloc[[1,200],:].apply(plot_decompose, axis=1)
+# %% 
+df_decompose.iloc[[1,199],:].apply(plot_decompose, axis=1)
 # for r in df_decompose.iloc[0,:]: 
 #     print(type(r.iteration))
 
